@@ -1,0 +1,39 @@
+create database school_management; 
+use school_management; 
+create table Person(name varchar(30),email varchar(30),address varchar(30),ssn varchar(30),primary key(ssn),phone integer,nationality varchar(30),sex varchar(10)); 
+create table Faculty(position varchar(30),join_date date,ssn varchar(30),foreign key(ssn) references Person(ssn)); 
+create table Student(type varchar(30),class varchar(10),ssn varchar(30),foreign key(ssn) references Person(ssn)); 
+create table Department(name varchar(30),phone integer,dept_id varchar(20),address varchar(30),primary key(dept_id),ssn varchar(30),foreign key(ssn) references Person(ssn)); 
+create table College(name varchar(30),address varchar(30),phone integer,college_id varchar(30),primary key(college_id),ssn varchar(30),foreign key(ssn) references Person(ssn)); 
+create table Course(course_id varchar(30),primary key(course_id),name varchar(30),textbook varchar(30),ssn varchar(30),foreign key(ssn) references Person(ssn)); 
+create table Section(section_id integer,years date,capacity integer,semester varchar(10),primary key(section_id),ssn varchar(30),foreign key(ssn) references Person(ssn)); 
+insert into Person 
+values('krishna','krishna@gmail.com','jayanagar','123','12345','india','male'); insert into Person values('kundan','kundan@gmail.com','jp 
+nagar','122','11345','india','male'); 
+insert into Person 
+values('vaishak','vaishak@gmail.com','basvangudi','121','12344','india','male'); insert into Person 
+values('bindhu','bindhu@gmail.com','basvangudi','124','42345','india','female'); insert into Person 
+values('vipul','vipul@gmail.com','basvangudi','125','22345','india','male'); 
+insert into Faculty values('hod',20/08/2020,'123'); 
+insert into Faculty values('professor',20/08/2021,'122'); 
+insert into Faculty values('ass.professor',20/082022,'121'); 
+insert into Faculty values('professor',20/01/2021,'124'); 
+insert into Faculty values('professor',20/10/2021,'125'); 
+insert into Student values('fresher','1st pu','123'); 
+insert into Student values('fresher','2nd pu','122'); 
+insert into Student values('fresher','1st pu','121'); 
+insert into Student values('fresher','2nd pu','124'); 
+insert into Student values('fresher','1st pu','125'); 
+insert into Department values('pcmc','4567','9876','jp nagar','123'); insert into Department values('pcmb','4517','9875','jp nagar','122'); insert into Department values('pcmc','4527','9874','jayanagar','121'); insert into Department values('pcme','4537','9873','basavangudi','124'); insert into Department values('pcmb','2567','9872','kr puram','125'); 
+insert into College values('krishna','jayanagar','45678','111','123'); insert into College values('kundan','jp nagar','45679','112','122'); insert into College values('vipul','jp nagar','45677','113','121'); 
+insert into College values('vaishak','basavangudi','45676','114','124'); insert into College values('bindhu','jp nagar','45674','115','125'); 
+insert into Course values('100','krishna','science','123'); 
+insert into Course values('101','kundan','physics','122'); 
+insert into Course values('102','vipul','biology','121'); 
+insert into Course values('103','bindhu','maths','124'); 
+insert into Course values('104','vaishak','electronics','125'); 
+insert into Section values('200',11/01/2011,50,'1st','123'); 
+insert into Section values('201',20/01/2011,50,'2nd','122'); 
+insert into Section values('202',11/11/2011,50,'3rd','121'); 
+insert into Section values('203',11/12/2011,50,'4th','124'); 
+insert into Section values('204',20/01/2011,50,'1st','125');
