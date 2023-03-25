@@ -1,0 +1,12 @@
+select *from Section;
+select *from Person;
+select *from Course;
+select *from College; 
+select *from Department;
+select *from Student;
+select *from Faculty;
+select *from College where address='jp nagar';
+select name,ssn,email from Person where address='basvangudi';
+select ssn,name from Department where(select ssn from Person where ssn='121');
+select name,phone from College group by address having count(*)>1; 
+select name,phone from College where ssn='125' group by address;
