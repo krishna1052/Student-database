@@ -1,4 +1,4 @@
-# Student-database
+# Student-database Management
 ## Introduction
 Education system forms the backbone of every nation.And hence it is important to provideastrong educational foundation to the young generation to ensure the development of open-minded global citizens securing the future for everyone. Advanced technology available today can playacrucial role in streamlining education-related processes to promote solidarity among students,teachers, parents and the school staff. 
 
